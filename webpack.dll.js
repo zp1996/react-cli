@@ -7,10 +7,12 @@ const webpack = require('webpack'),
 const lib = [
     'react',
     'react-dom',
+    'react-router',
     'redux',
     'react-redux',
     'redux-saga',
-    'pure-render-decorator'
+    'pure-render-decorator',
+    'react-addons-css-transition-group'
 ];
 
 const compress = env === 'production' ? [

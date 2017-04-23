@@ -3,7 +3,7 @@ import styles from './index.less';
 
 const Header = () => {
     return (
-        <header>
+        <header className="web-header">
             <h1>react-cli</h1>
         </header>
     );
