@@ -29,12 +29,12 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.less'],
         alias: {
             Root: path.resolve(rootPath, 'src/'),
             Components: path.resolve(rootPath, 'src/components/'),
             Containers: path.resolve(rootPath, 'src/containers/'),
-            Styles: path.resolve(rootPath, 'src/components/styles/'),
+            Styles: path.resolve(rootPath, 'src/styles/'),
             Stores: path.resolve(rootPath, 'src/stores/')
         }
     },
