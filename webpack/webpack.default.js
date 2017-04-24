@@ -11,7 +11,7 @@ const path = require('path'),
 const getAlias = (init = {}) => {
     const dirs = [
         'components', 'containers', 'constants',
-        'styles', 'reducers', 'stores'
+        'styles', 'reducers', 'stores', 'sagas'
     ];
     return dirs.reduce((res, dir) => {
         const key = dir.replace(/(|^)[a-z]/, _ => _.toUpperCase());
