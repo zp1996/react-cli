@@ -8,6 +8,19 @@ const path = require('path'),
     rootPath = path.join(__dirname, '../'),
     outputPath = path.join(rootPath, 'dist');
 
+const getAlias = (init = {}) => {
+    const dirs = [
+        'components', 'containers', 'constants',
+        'styles', 'reducers', 'stores'
+    ];
+    return dirs.reduce((res, dir) => {
+        const key = dir.replace(/(|^)[a-z]/, _ => _.toUpperCase());
+        return Object.assign(res, {
+            [key]: path.resolve(rootPath, `src/${dir}`)
+        })
+    }, init);
+};
+
 module.exports = {
     port,
     rootPath,
@@ -30,15 +43,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx'],
-        alias: {
-            Root: path.resolve(rootPath, 'src/'),
-            Components: path.resolve(rootPath, 'src/components/'),
-            Containers: path.resolve(rootPath, 'src/containers/'),
-            Constants: path.resolve(rootPath, 'src/constants'),
-            Styles: path.resolve(rootPath, 'src/styles/'),
-            Stores: path.resolve(rootPath, 'src/stores/'),
-            Reducers: path.resolve(rootPath, 'src/reducers')
-        }
+        alias: getAlias({
+            Root: path.resolve(rootPath, 'src/')
+        })
     },
     devtool: 'source-map',
     plugins: [
