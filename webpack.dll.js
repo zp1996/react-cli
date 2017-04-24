@@ -1,6 +1,7 @@
 const webpack = require('webpack'),
     path = require('path'),
     env = process.env.NODE_ENV,
+    prod = env === 'production',
     outputPath = `${__dirname}/lib`;
 
 // 依赖的公共资源
@@ -16,7 +17,7 @@ const lib = [
     'react-addons-css-transition-group'
 ];
 
-const compress = env === 'production' ? [
+const compress = prod ? [
     new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
@@ -31,7 +32,7 @@ module.exports = {
     entry: { lib },
     output: {
         path: outputPath,
-        filename: 'lib.js',
+        filename: prod ? 'lib.[chunkhash:8].js' : 'lib.js',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

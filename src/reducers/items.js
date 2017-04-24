@@ -1,6 +1,6 @@
 import { PUSH_ITEM, POP_ITEM } from 'Constants/actions';
 
-const initialState = [ 'HTML', 'CSS', 'JavaScript' ];
+const initialState = [ 'HTML5', 'CSS3', 'ES2015' ];
 
 const items = (state = initialState, action) => {
     switch (action.type) {
