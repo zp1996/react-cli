@@ -29,13 +29,15 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.less'],
+        extensions: ['.js', '.jsx'],
         alias: {
             Root: path.resolve(rootPath, 'src/'),
             Components: path.resolve(rootPath, 'src/components/'),
             Containers: path.resolve(rootPath, 'src/containers/'),
+            Constants: path.resolve(rootPath, 'src/constants'),
             Styles: path.resolve(rootPath, 'src/styles/'),
-            Stores: path.resolve(rootPath, 'src/stores/')
+            Stores: path.resolve(rootPath, 'src/stores/'),
+            Reducers: path.resolve(rootPath, 'src/reducers')
         }
     },
     devtool: 'source-map',

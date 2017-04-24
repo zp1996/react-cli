@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Route, IndexRoute  } from 'react-router';
+import Index from 'Containers/index';
 
 const Container = ({children, location}) => (
     <ReactCSSTransitionGroup

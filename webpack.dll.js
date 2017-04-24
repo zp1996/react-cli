@@ -10,6 +10,7 @@ const lib = [
     'react-router',
     'redux',
     'react-redux',
+    'react-router-redux',
     'redux-saga',
     'pure-render-decorator',
     'react-addons-css-transition-group'
