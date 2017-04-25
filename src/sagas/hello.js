@@ -1,3 +1,3 @@
-export  default function *helloSaga() {
+export function *helloSaga() {
     console.log('hello saga');
 }

@@ -10,7 +10,7 @@ const path = require('path'),
 
 const getAlias = (init = {}) => {
     const dirs = [
-        'components', 'containers', 'constants',
+        'components', 'containers', 'constants', 'actions',
         'styles', 'reducers', 'stores', 'sagas'
     ];
     return dirs.reduce((res, dir) => {
