@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import Header from 'Components/Header';
 import List from 'Components/List';
 import { POP_ITEM_ASYNC } from 'Constants/sagas';
@@ -22,6 +23,8 @@ class Index extends Component {
         return (
             <div>
                 <Header />
+                <h1>Index Page</h1>
+                <Link to="/test">Test Page</Link>
                 <div className="index-container">
                     <List items={items} />
                 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Route, IndexRoute  } from 'react-router';
 import Index from 'Containers/index';
+import Test from 'Containers/test';
 
 const Container = ({children, location}) => (
     <ReactCSSTransitionGroup
@@ -22,5 +23,6 @@ const Container = ({children, location}) => (
 export default (
     <Route path="/" component={Container}>
         <IndexRoute component={Index} />
+        <Route path="test" component={Test} />
     </Route>
 )
