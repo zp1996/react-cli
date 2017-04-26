@@ -3,12 +3,8 @@ import createSagaMiddleware from 'redux-saga';
 import reducer from 'Reducers/index';
 import rootSaga from 'Sagas/index';
 
-const enhancer = compose(
-    applyMiddleware([
-        createSagaMiddleware()
-    ])
-);
-
+const sagaMiddleware = createSagaMiddleware();
+const enhancer = applyMiddleware(sagaMiddleware);
 const initialState = window.__INITIAL_STATE__,
     store = createStore(reducer, initialState, enhancer);
 

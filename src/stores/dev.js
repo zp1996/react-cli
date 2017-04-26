@@ -9,9 +9,7 @@ const middlewares = [
     logger,
     sagaMiddleware
 ];
-const enhancer = compose(
-    applyMiddleware(...middlewares)
-);
+const enhancer = applyMiddleware(...middlewares);
 
 function configureStore(reducer, initialState, enhancer) {
     const store = createStore(reducer, initialState, enhancer);
