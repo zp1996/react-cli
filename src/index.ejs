@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>react-cli</title>
+    </head>
+    <body>
+        <div id="root">
+            <%= htmlWebpackPlugin.options.dom %>
+        </div>
+        <script type="text/javascript">
+            window.__INITIAL_STATE__ = <%= htmlWebpackPlugin.options.state %>
+        </script>
+    </body>
+</html>

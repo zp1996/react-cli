@@ -3,3 +3,4 @@ npm-debug.log
 dist/
 lib/
 .Ds_Store
+ssr.js

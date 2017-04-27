@@ -39,6 +39,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: `${rootPath}/src/index.html`,
         }),
+        new HtmlWebpackPlugin({
+            template: `${rootPath}/src/index.ejs`,
+            filename: `${outputPath}/index.ejs`,
+            dom: '<%- html %>',
+            state: '<%- state %>'
+        }),
         ...plugins
     ]
 };

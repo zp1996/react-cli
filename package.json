@@ -9,7 +9,9 @@
     "prod-dll": "NODE_ENV=production npm run dll",
     "dll": "webpack --config ./webpack.dll.js",
     "dev": "webpack-dev-server --config ./webpack/client/webpack.dev.js --open",
-    "prod": "npm run prod-dll && webpack --config ./webpack/client/webpack.prod.js && node prod.js"
+    "prod-build": "npm run prod-dll && webpack --config ./webpack/client/webpack.prod.js",
+    "prod": "npm run prod-build && node prod.js",
+    "server": "npm run prod-build && webpack --config ./webpack/server/webpack.prod.js && node ssr.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "koa": "^2.2.0",
+    "koa-ejs": "^4.0.0",
     "lsgo-file": "^1.0.0",
     "pure-render-decorator": "^1.2.1",
     "react": "^15.5.4",
