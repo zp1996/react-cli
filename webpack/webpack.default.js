@@ -38,11 +38,16 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: ['awesome-typescript-loader']
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: getAlias({
             Root: path.resolve(rootPath, 'src/')
         })

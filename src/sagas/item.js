@@ -14,6 +14,6 @@ function* popItemAsync() {
 export default function *watchPopItem() {
     while (true) {
         yield take(POP_ITEM_ASYNC);
-        yield fork(popItemAsync);    
+        yield fork(popItemAsync);
     }
 }
